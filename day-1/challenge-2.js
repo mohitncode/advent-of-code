@@ -1,21 +1,9 @@
-// Level 1-1
-function findSantasFloor(input) {
-  var currentFloor = 0;
-  var goOneUp = '(';
-  var goOneDown = ')';
+var rl = require('readline').createInterface({
+  input: require('fs').createReadStream('challenge-in.txt')
+});
 
-  for (var i = 0; i < input.length; i++) {
-    if (input.charAt(i) === goOneUp) {
-      currentFloor++;
-    } else if (input.charAt(i) === goOneDown) {
-      currentFloor--;
-    }
-  }
+rl.on('line', getBasementCharPosition);
 
-  return currentFloor;
-}
-
-// Level 1-2
 function getBasementCharPosition(input) {
   var currentFloor = 0;
   var goOneUp = '(';
@@ -36,5 +24,6 @@ function getBasementCharPosition(input) {
     }
   }
 
+  console.log('Santa has entered basement at position ' + charPosition);
   return charPosition;
 }
