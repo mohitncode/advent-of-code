@@ -1,5 +1,5 @@
 var rl = require('readline').createInterface({
-	input: require('fs').createReadStream('challenge-in.txt')
+  input: require('fs').createReadStream('challenge-in.txt')
 });
 
 var niceStringsCount = 0;
