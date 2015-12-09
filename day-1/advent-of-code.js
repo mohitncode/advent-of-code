@@ -38,10 +38,3 @@ function getBasementCharPosition(input) {
 
   return charPosition;
 }
-
-// Level 2-1
-function getWrappingPaperInFeet() {
-  var totalWrappingPaperRequired = 0;
-
-  return totalWrappingPaperRequired;
-}
