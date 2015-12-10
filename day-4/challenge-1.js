@@ -15,7 +15,7 @@ function mineAdventCoins(input) {
       coinValue = input + seedNumber,
       coinHash = mine(coinValue);
 
-  // WHile coin hash does not start with the given prefix, keep mining
+  // While coin hash does not start with the given prefix, keep mining
   while (!coinRegEx.test(coinHash)) {
     seedNumber++;
     coinValue = input + seedNumber;

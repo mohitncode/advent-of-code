@@ -28,7 +28,7 @@ function containsDuplicateLetterPair(line) {
 
     // If the strings are using a common letter (for example the string "aaa")
     // then the first pair index and the last pair index will be different.
-    // This check ensures that the difference between the indexes is greater than 
+    // This check ensures that the difference between the indexes is greater than
     // 1. So "aaaa" will yield a difference of two but "aaa" will yield -1
     notUsingOverlappingLetter = (letterPairLastIndex - letterPairFirstIndex) > 1;
 
