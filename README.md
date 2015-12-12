@@ -1,12 +1,16 @@
 # Advent of Code
 
-Solutions to the Advent of Code 2015 challenge: 
+Solutions to the Advent of Code 2015 challenge:
 
 http://adventofcode.com/
 
 ## Dependencies
 
-None! Just need NodeJS. No need for any additional packages.
+None! Just need NodeJS or a web browser (preferably Chrome). No need to install any additional packages.
+
+Some of the solutions have been written to be run on the browser (notably those lacking a `challenge-in.txt` file).
+To run those simply open the input page for your challenge and copy paste the solution code into the developer console
+of the page.
 
 ## Installing and running
 
