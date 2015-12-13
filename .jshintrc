@@ -1,0 +1,14 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "undef": true,
+  "globals": {
+    "require": false,
+    "module": true,
+    "console": false,
+    "document": false
+  },
+  "node": true,
+  "strict": "global",
+  "unused": true
+}
