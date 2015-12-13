@@ -1,3 +1,4 @@
+"use strict";
 var rl = require('readline').createInterface({
   input: require('fs').createReadStream('challenge-in.txt')
 });
@@ -19,7 +20,6 @@ rl.on('line', function (line) {
 });
 
 // Assign wire b the value of 3176 as that is the previous computed signal of a.
-
 rl.on('close', function() {
   instructionsArray[3] = '3176 -> b';
   do {
@@ -35,16 +35,17 @@ rl.on('close', function() {
       }
     }
   }
-  while (!isCircuitMapFullyDefined())
+  while (!isCircuitMapFullyDefined());
 
-  console.log('circuitMap[\'a\'] = ' + circuitMap['a']);
+  console.log('circuitMap[\'a\'] = ' + circuitMap.a);
 });
 
 function executeInstruction(line) {
   var instruction = parseInstruction(line),
-      instructionType = getOperatorType(instruction),
-      line = line.replace(/\s/gi, '').split('->'),
-      output = line[line.length - 1];
+      instructionType = getOperatorType(instruction);
+
+  line = line.replace(/\s/gi, '').split('->');
+  var output = line[line.length - 1];
 
   if (instructionType === UNARY) {
     var operand = line[0].split(instruction).filter(Boolean)[0];
@@ -53,7 +54,7 @@ function executeInstruction(line) {
     if (!isNullOrUndefined(operand)) {
       switch (instruction) {
         case ASSIGNMENT:
-          circuitMap[output] = maskTo16Bits(operand); 
+          circuitMap[output] = maskTo16Bits(operand);
           break;
         case NOT:
           circuitMap[output] = maskTo16Bits(~ operand);

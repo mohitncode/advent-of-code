@@ -1,3 +1,4 @@
+"use strict";
 var rl = require('readline').createInterface({
 	input: require('fs').createReadStream('challenge-in.txt')
 });
@@ -41,7 +42,7 @@ function executeInstruction(instruction, range) {
 			columnEnd = range[3];
 
 	while (columnStart <= columnEnd) {
-		var rowStart = range[0]
+		var rowStart = range[0],
 				rowEnd = range[1];
 
 		while (rowStart <= rowEnd) {
@@ -57,7 +58,7 @@ function executeInstruction(instruction, range) {
 		}
 		columnStart++;
 	}
-};
+}
 
 function initializeLightMap() {
 	for (var i = 0; i < MAX_LENGTH; i++) {

@@ -1,3 +1,4 @@
+"use strict";
 var fs = require('fs');
 var readline = require('readline').createInterface({
   input: fs.createReadStream('challenge-in.txt')
@@ -7,8 +8,8 @@ var totalUniqueHousesVisited = 0,
     visitedCoordinates = {};
 
 readline.on('line', function (line) {
-    var numberOfHouses = getHousesWithAtLeastOnePresent(line);
-    console.log('Total unique houses visited = ' + numberOfHouses);
+  var numberOfHouses = getHousesWithAtLeastOnePresent(line);
+  console.log('Total unique houses visited = ' + numberOfHouses);
 });
 
 function getHousesWithAtLeastOnePresent(line) {
@@ -39,7 +40,7 @@ function getHousesWithAtLeastOnePresent(line) {
       currentXPos = roboSantaCurrentXPos;
       currentYPos = roboSantaCurrentYPos;
     }
-    
+
     if (direction === LEFT) {
       currentXPos--;
     } else if (direction === RIGHT) {

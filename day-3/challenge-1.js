@@ -1,3 +1,4 @@
+"use strict";
 var fs = require('fs');
 var readline = require('readline').createInterface({
   input: fs.createReadStream('challenge-in.txt')
@@ -38,8 +39,8 @@ function getHousesWithAtLeastOnePresent(line) {
 
     // If node has not been visited already, set gifts distributed to
     // one. And add it to the total number of houses visited.
-    if (visitedCoordinates[currentCoordinates] === null
-      || visitedCoordinates[currentCoordinates] === undefined) {
+    if (visitedCoordinates[currentCoordinates] === null ||
+          visitedCoordinates[currentCoordinates] === undefined) {
         visitedCoordinates[currentCoordinates] = 1;
         totalUniqueHousesVisited++;
 

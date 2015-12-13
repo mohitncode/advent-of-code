@@ -1,3 +1,4 @@
+"use strict";
 var rl = require('readline').createInterface({
   input: require('fs').createReadStream('challenge-in.txt')
 });
@@ -20,8 +21,8 @@ function generatePassword() {
   // While all the password requirements are not satisfied, increment the current password
   do {
     password = getNextPassword(password);
-  } while (containsBlackListedCharacters(password) || !containsTwoLetterPairs(password)
-      || !containsThreeConsecutiveLetters(password) || password.length !== 8);
+  } while (containsBlackListedCharacters(password) || !containsTwoLetterPairs(password) ||
+      !containsThreeConsecutiveLetters(password) || password.length !== 8);
 
   return password;
 }

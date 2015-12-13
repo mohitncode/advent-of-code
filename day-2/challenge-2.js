@@ -1,3 +1,4 @@
+"use strict";
 var fs = require('fs');
 var readline = require('readline').createInterface({
   input: fs.createReadStream('challenge-in.txt')

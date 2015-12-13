@@ -1,3 +1,4 @@
+"use strict";
 var input = document.body.textContent.trim(),
     inputObj = JSON.parse(input),
     sum = 0;

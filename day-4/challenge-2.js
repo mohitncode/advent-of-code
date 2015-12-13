@@ -1,8 +1,9 @@
-var fs = require('fs');
-var crypto = require('crypto');
-var readline = require('readline').createInterface({
-  input: fs.createReadStream('challenge-in.txt')
-});
+"use strict";
+var fs = require('fs'),
+    crypto = require('crypto'),
+    readline = require('readline').createInterface({
+      input: fs.createReadStream('challenge-in.txt')
+    });
 
 readline.on('line', function (line) {
     var adventCoin = mineAdventCoins(line);
