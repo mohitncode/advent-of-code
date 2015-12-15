@@ -84,8 +84,8 @@ function getRanges(input) {
 			endRange = rangeString[1].split(',');
 
 	for (var i = 0; i < 2; i++) {
-		range.push(parseInt(startingRange[i]));
-		range.push(parseInt(endRange[i]));
+	  range.push(parseInt(startingRange[i]));
+  	range.push(parseInt(endRange[i]));
 	}
 
 	return range;
